@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "6ece5098-7526-49bd-84db-843e60e0a901",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:9000/api/products/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9000/api/products/",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:9000/api/products/store",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "                {\"id\": 999,\n                \"product_name\": \"Karkas ukuran  0,7 - 0,8\",\n                \"category\": 1,\n                \"type\": \"fresh\",\n                \"item\": \"pack\",\n                \"weight\": 0.7,\n                \"sku\": \"SKU000101010\",\n                \"price_sell\": 25000,\n                \"price_promo\": 0,\n                \"price_agent\": 24000,\n                \"photo\": \"images/product-2019-09-26-113126.jpg\",\n                \"recommendation\": null,\n                \"description\": \"Kenalan Yuk!\\r\\n\\r\\nAyam karkas ukuran 0.7-0.8 kg dari Meyer Food biasa dipotong 4 cocok untuk penggunaan pecel ayam atau bisa juga untuk kamu yang mau masak ayam bakar atau goreng di rumah. \\r\\nAyam Karkas adalah ayam potong utuh yang telah dibersihkan tanpa jeroan, ceker, kepala, darah, dan bulu. Semua ayam fresh yang dipotong di malam hari lalu dikirim keesokan harinya. Dilengkapi dengan sertifikasi Halal dan NKV, ayam karkas ini terbebas dari virus flu burung, higienis, serta melalui proses pemotongan yang modern dan terbebas dari zat berbahaya.\",\n                \"status\": \"1\",\n                \"ordering\": null,\n                \"category_name\": \"Karkas\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/api/products/store",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"products",
+						"store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:9000/api/orders?start=2019-01-01&end=2020-01-01",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9000/api/orders?start=2019-01-01&end=2020-01-01",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"orders"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "2019-01-01"
+						},
+						{
+							"key": "end",
+							"value": "2020-01-01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:9000/api/order/store",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n                \"id\": 39990402,\n                \"invoice_id\": \"INV2709201939990402\",\n                \"customer_id\": 15282,\n                \"name\": \"Kumala Sari\",\n                \"phone\": null,\n                \"address\": \"Taman holandia jalan Volendam no. 33\",\n                \"kelurahan\": \"PAKU JAYA\",\n                \"kecamatan\": \"SERPONG UTARA\",\n                \"kota\": \"TANGERANG\",\n                \"provinsi\": \"BANTEN\",\n                \"kode_pos\": \"15138\",\n                \"latitude\": \"-6.221725\",\n                \"longitude\": \"106.62018460000002\",\n                \"agent_id\": 15282,\n                \"agent_name\": \"MYR0017\",\n                \"payment_method\": null,\n                \"payment_link\": \"https://app.sandbox.midtrans.com/snap/v2/vtweb/58d356ef-5872-4c2a-bd3d-c9b1e7bc3721\",\n                \"payment_date\": null,\n                \"buy_by\": \"partner\",\n                \"payment_total\": 1045000,\n                \"coupon_id\": null,\n                \"payment_discount_code\": null,\n                \"payment_discount\": 0,\n                \"payment_final\": 1045000,\n                \"order_weight\": 20.4,\n                \"order_distance\": 0,\n                \"delivery_status\": null,\n                \"delivery_fee\": 0,\n                \"delivery_track\": null,\n                \"delivery_time\": \"07.00-10.00\",\n                \"delivery_date\": \"2019-09-29\",\n                \"order_time\": \"2019-09-27 15:52:15\",\n                \"status\": \"1\",\n                \"product-id\":[3,4],\n                \"qty\":[1,1],\n                \"harga\":[10000,11000]\n            }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/api/orders/store",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"orders",
+						"store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:9000/api/users/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "15039",
+							"type": "text"
+						},
+						{
+							"key": "pin",
+							"value": "7013",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:9000/api/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "15039",
+							"disabled": true
+						},
+						{
+							"key": "pin",
+							"value": "7013",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
